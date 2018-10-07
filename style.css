@@ -1,0 +1,15 @@
+html,
+body {
+  //Center the height of the content (use percent)
+  //Add light blue background color
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+}
