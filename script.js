@@ -14,7 +14,7 @@ const library = [
   //with the readingStatus set to false for two of the and true for one of them.
 ];
 
-button.addEventListener("click", function createList() {
+createList = () => {
   //iterate through library array of objects created above
   let book = ["'" + <get the title of each object in library here> + "'" + ' by ' + <get the author of each object in library here> + "."];
   if(set if condition to check if library book reading status equals true here){
@@ -29,9 +29,9 @@ button.addEventListener("click", function createList() {
 //remember the closing curly brace above for the iteration "}"
 
 button.disabled = true;
-});
+};
 
-document.getElementById("addButton").addEventListener("click", function(){
+addBook = () => {
   let title = document.getElementById("title").value;
   //get the value of author and set to variable using similar to above line
   //get the value of readingStatus input and set to variable similar to above line
@@ -58,7 +58,7 @@ document.getElementById("addButton").addEventListener("click", function(){
       statusNotRead.appendChild(linebreak);
     }
     //call resetForm function here
-});
+};
 
 function resetForm() {
  title.value = "";
