@@ -43,7 +43,7 @@ checkStoredBooks = () => {
 addBook = () => {
   let title = document.getElementById('title').value;
   let author = document.getElementById('author').value;
-  let readingStatus = document.getElementById('readingStatus').value;
+  let readingStatus = document.getElementById('readingStatus').checked;
 
   let newObj = {
     title: '',
@@ -59,7 +59,8 @@ addBook = () => {
 
   console.log("show me newObj", newObj)
   let book = ["'" + newObj.title + "'" + ' by ' + newObj.author + '.'];
-  if (newObj.readingStatus === 'on') {
+  if (newObj.readingStatus === true) {
+    console.log("does checked value work here?!?!", newObj.readingStatus)
     const linebreak = document.createElement('br');
     statusRead.append(book);
     statusRead.appendChild(linebreak);
