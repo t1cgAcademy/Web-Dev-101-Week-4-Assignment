@@ -2,7 +2,8 @@ const statusRead = document.getElementById('statusRead');
 const statusNotRead = document.getElementById('statusNotRead');
 const button = document.querySelector('button');
 
-const library = [{
+const library = [
+  {
     title: 'Eloquent JavaScript: A Modern Introduction to Programming',
     author: 'Marijn Haverbek',
     readingStatus: 'true',
@@ -38,7 +39,7 @@ checkStoredBooks = () => {
     }
   }
   button.disabled = true;
-}
+};
 
 addBook = () => {
   let title = document.getElementById('title').value;
@@ -57,10 +58,8 @@ addBook = () => {
 
   library.push(newObj);
 
-  console.log("show me newObj", newObj)
   let book = ["'" + newObj.title + "'" + ' by ' + newObj.author + '.'];
   if (newObj.readingStatus === true) {
-    console.log("does checked value work here?!?!", newObj.readingStatus)
     const linebreak = document.createElement('br');
     statusRead.append(book);
     statusRead.appendChild(linebreak);
@@ -72,10 +71,9 @@ addBook = () => {
   }
 
   resetForm();
-}
+};
 
 function resetForm() {
   title.value = '';
   author.value = '';
-  readingStatus.value = '';
 }
