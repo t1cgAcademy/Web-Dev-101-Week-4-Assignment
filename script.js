@@ -58,7 +58,7 @@ addBook = () => {
 
   library.push(newObj);
 
-  let book = ["'" + newObj.title + "'" + ' by ' + newObj.author + '.'];
+  let book = "'" + newObj.title + "'" + ' by ' + newObj.author + '.';
   if (newObj.readingStatus === true) {
     const linebreak = document.createElement('br');
     statusRead.append(book);
