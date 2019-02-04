@@ -1,6 +1,6 @@
 const statusRead = document.getElementById('statusRead');
 const statusNotRead = document.getElementById('statusNotRead');
-const button = document.querySelector('button');
+const button = document.querySelector('#checkBooks');
 
 const library = [
   {
