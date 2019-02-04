@@ -1,56 +1,56 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous" />
-  <link rel=stylesheet href="style.css" type="text/css" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
 
   <title>academy</title>
 </head>
-<style>
-</style>
+<style></style>
 
 <body>
-
-  <h1 class="title">JSON Object Format Helper!!!</h1>
+  <!-- Add title tag using H1 with class titleDisplay, and set
+    title text to display  "JSON Object Format Helper!!!"-->
   <div class="outputPanel">
-    <h2>Reading List</h2>
-    <p>You have read...</p>
+    <!-- Add h2 with header text set to display "Reading List" -->
+    <!-- Add paragraph tag with text "You have read..." -->
     <div>
-      <p id="statusRead"></p>
+      <!-- Add empty paragraph tag with id of statusRead -->
     </div>
-    <p>You still have to read...</p>
-    <p id="statusNotRead"></p>
-    <button class="buttonStyle" onclick="checkStoredBooks()">Status of Stored Books</button>
+    <!-- Add paragraph tag with text "You still have to read..." -->
+    <!-- Add empty paragraph tag with id of statusNotRead -->
+    <!-- Add button with class buttonStyle, id checkBooks, an onclick set to check stored books function call, and 
+      button text set to "Status of Stored Books" -->
   </div>
   <div class="inputPanel">
-
     <div>
       <p>{</p>
-      <p>title:</p>
-      <input type="text" id="title" />
-      <p>,</p>
+      <!-- Add paragraph tab with text "title:" -->
+      <!-- Add text input with id of title -->
+      <!-- Add paragraph tag with text "," -->
     </div>
 
     <div>
       <p>author:</p>
-      <input type="text" id="author" />
+      <!-- Add text input with id of author -->
       <p>,</p>
     </div>
 
     <div>
-      <p>readingStatus:</p>
-      <input class="readClass" type="checkbox" id="readingStatus" />
-      <p class="torf1">True</p>
-      <p class="torf2">False</p>
-      <p>};</p>
+      <!-- Add paragraph tag with text "Reading Status:" -->
+      <!-- Add checkbox input with class readClass and id readingStatus  -->
+      <!-- Add paragraph tag with class torf1 and set text to display "True" -->
+      <!-- Add paragraph tag with class torf2 and set text to display "False" -->
+      <!-- Add paragraph tag with text "};" -->
     </div>
 
-    <button class="buttonStyle" id="addButton" onclick="addBook()">Add New Object</button>
+    <!-- Add button with class buttonStyle, id addButton, onclick set to add book
+    function call.  Set button text to display "Add New Object" -->
   </div>
 </body>
 <script src="script.js"></script>

@@ -11,7 +11,7 @@ body {
   background-color: lightblue;
 }
 
-.title {
+.titleDisplay {
   font-family: Serif;
   border-style: outset;
   background-color: lightseagreen;
@@ -49,10 +49,10 @@ body {
 }
 
 /* select readclass, select psuedo-selector (checked state), ~ - means get sibling anywhere after, followed by desired sibling selector */
-.readClass:checked~.torf2 {
+.readClass:checked ~ .torf2 {
   display: none;
 }
 
-.readClass:not(:checked)~.torf1 {
+.readClass:not(:checked) ~ .torf1 {
   display: none;
 }

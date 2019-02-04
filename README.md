@@ -7,7 +7,7 @@ then create a button that organizes the object according to readingStatus. Secon
 create three inputs and a button. These inputs will take the same information from new books you want to enter,
 and then add them to the list of already organized book information when the button is clicked.
 
-1. You will have to remember how to create event listeners and attach functions.
+1. You will have to remember how to create event listeners.
 2. Remember Object format!!!
 3. Don't forget about your HTML and Javascript selectors!!!
 4. Refer to previous lessons/assignments for instructions on cloning code and getting started.
