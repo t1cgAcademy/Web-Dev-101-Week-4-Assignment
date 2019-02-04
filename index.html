@@ -15,35 +15,43 @@
 </style>
 
 <body>
-  <h1>JSON Object Format Helper!!!</h1>
-  <h2>Reading List</h2>
-  <h3>You have read...</h3>
-  <div>
-    <p id="statusRead"></p>
-  </div>
-  <h3>You still have to read...</h3>
-  <p id="statusNotRead"></p>
-  <button>Status of Stored Books</button>
-  <div>
-    <h4>{</h4>
-    <h4>title:</h4>
-    //create input below with type set to text and the id of title
-    <h4>,</h4>
-  </div>
 
-  <div>
-    <h4>author:</h4>
-    //create input below with type set to text and the id of author
-    <h4>,</h4>
+  <h1 class="title">JSON Object Format Helper!!!</h1>
+  <div class="outputPanel">
+    <h2>Reading List</h2>
+    <p>You have read...</p>
+    <div>
+      <p id="statusRead"></p>
+    </div>
+    <p>You still have to read...</p>
+    <p id="statusNotRead"></p>
+    <button class="buttonStyle" onclick="checkStoredBooks()">Status of Stored Books</button>
   </div>
+  <div class="inputPanel">
 
-  <div>
-    <h4>readingStatus:</h4>
-    //create input below with type set to text and the id of readingSatus
-    <h4>};</h4>
+    <div>
+      <p>{</p>
+      <p>title:</p>
+      <input type="text" id="title" />
+      <p>,</p>
+    </div>
+
+    <div>
+      <p>author:</p>
+      <input type="text" id="author" />
+      <p>,</p>
+    </div>
+
+    <div>
+      <p>readingStatus:</p>
+      <input class="readClass" type="checkbox" id="readingStatus" />
+      <p class="torf1">True</p>
+      <p class="torf2">False</p>
+      <p>};</p>
+    </div>
+
+    <button class="buttonStyle" id="addButton" onclick="addBook()">Add New Object</button>
   </div>
-
-  //create button with id of addButton and texst of Add new Object
 </body>
 <script src="script.js"></script>
 

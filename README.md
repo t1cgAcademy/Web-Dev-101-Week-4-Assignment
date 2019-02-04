@@ -8,8 +8,6 @@ create three inputs and a button. These inputs will take the same information fr
 and then add them to the list of already organized book information when the button is clicked.
 
 1. You will have to remember how to create event listeners and attach functions.
-2. In this project, CSS will not be in a separate file. You will add the CSS to the
-   top of the HTML in a style tag.
-3. Remember Object format!!!
-4. Don't forget about your HTML and Javascript selectors!!!
-5. Refer to previous lessons/assignments for instructions on cloning code and getting started.
+2. Remember Object format!!!
+3. Don't forget about your HTML and Javascript selectors!!!
+4. Refer to previous lessons/assignments for instructions on cloning code and getting started.
