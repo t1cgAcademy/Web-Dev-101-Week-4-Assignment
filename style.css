@@ -1,51 +1,53 @@
-html {
-  display: table;
-  margin: auto;
-}
+/* Style the entire html element with a table display and margin auto */
 
 body {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  height: 100%;
-  background-color: lightblue;
+  /* Set display to table-cell
+  Vertically align contents of body to middle of element
+  Center all text alignment
+  Set height to 100%
+  Set background color to light blue */
 }
 
 .titleDisplay {
-  font-family: Serif;
-  border-style: outset;
-  background-color: lightseagreen;
-  color: darkBlue;
-  margin: 40px;
-  padding: 40px;
-  box-shadow: 0 0 5px 0 #771b1b80;
+  /* Set font style (family) to Serif
+  Add outset border-style
+  Set background color to light sea green
+  Set text color to dark blue 
+  Set margin and padding to 40px */
+  /* Set your box shadow...
+    -There are 5 separate values to set for a beatiful
+    box shadow.
+    -Set horizontal and vertical offset values to 0
+    -Set blurriness to 5px
+    -Set spread to 0
+    -Set color to #771b1b80
+    -I can't tell you exactly how, it will be more fun
+    to just google it!  Plus it will help your practice
+    your google skills. */
 }
 
-.outputPanel,
-.inputPanel {
-  font-family: Serif;
-  height: auto;
-  width: 600px;
-  background-color: lightseagreen;
-  color: darkblue;
-  border-style: outset;
-  margin: 40px;
-  padding: 40px;
-  box-shadow: 0 0 5px 0 #771b1b80;
-}
+/* The following styles can be applied to both
+.outputPanel and .inputPanel... 
+Set font style (family) to Serif
+Set height to auto and width to 600px
+Set background color to light sea green
+Set text color to dark blue 
+Add outset border style
+Set margin and padding to 40px
+Set the same box shadow as above */
 
-.outputPanel button,
-.inputPanel button {
-  border-radius: 12px;
-  background-color: lightblue;
-  color: darkblue;
-  margin-top: 20px;
-  cursor: pointer;
-}
+/* The following styles can be applied to the button in 
+outputPanel and the button in inputPanel... 
+Round button corners by setting border radius to 12px
+Set background color to light blue 
+Set text color to dark blue 
+Set top margin only to 20px
+Set your cursor (arro) to turn to a finger pointer when 
+hovering over button */
 
 /* select any div tag and any p tag inside element with class inputPanel */
 .inputPanel div p {
-  display: inline-block;
+  /* Set inline block display */
 }
 
 /* select readclass, select psuedo-selector (checked state), ~ - means get sibling anywhere after, followed by desired sibling selector */
