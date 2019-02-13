@@ -67,3 +67,34 @@ function resetForm() {
 }
 
 // What could you change in this program to adhere to the DRY principle of programming?
+
+/////////////////New Task/////////////////////
+// Create selector called unreadBookArrayView using querySelector to get
+// element with class of the same name
+// Create selector called readBookArrayView using querySelector to get
+// element with class of the same name
+// Initialize a variable called unreadBookArray and set value to an empty array
+// Initialize a variable called readBookArray and set value to an empty array
+
+makeArray = () => {
+  // Iterate through const library (list of books in array of objects above){
+  // If the reading status of each object (book) is false, push the title
+  // of the object + a comma + a line break tag into unreadBookArray
+  // If the reading status of the object (book) is true, push the title
+  // of the object + a comma + plus a line break tag into readBookArray
+  // Hint: String or bool?
+  // }
+  // Set the inner html of unreadBookArrayView to display unreadBookArray
+  // array as one long string
+  // Set the inner html of readBookArrayView to display readBookArray
+  // array as one long string
+};
+
+updateArray = () => {
+  // Reset unreadBookArray to an empty array
+  // Reset readBookArray to an empty array
+  // Reset unreadBookArrayView display
+  // Reset readBookArrayView display
+  // Call makeArray function
+};
+//////////////////////////////////////////////

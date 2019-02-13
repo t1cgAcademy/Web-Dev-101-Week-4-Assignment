@@ -27,7 +27,7 @@ body {
 }
 
 /* The following styles can be applied to both
-.outputPanel and .inputPanel... 
+.outputPanel, .inputPanel, and .unreadArrayOutputPanel... 
 Set font style (family) to Serif
 Set height to auto and width to 600px
 Set background color to light sea green
@@ -36,8 +36,7 @@ Add outset border style
 Set margin and padding to 40px
 Set the same box shadow as above */
 
-/* The following styles can be applied to the button in 
-outputPanel and the button in inputPanel... 
+/* The following styles can be to all buttons... 
 Round button corners by setting border radius to 12px
 Set background color to light blue 
 Set text color to dark blue 
