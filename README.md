@@ -11,3 +11,10 @@ and then add them to the list of already organized book information when the but
 2. Remember Object format!!!
 3. Don't forget about your HTML and Javascript selectors!!!
 4. Refer to previous lessons/assignments for instructions on cloning code and getting started.
+
+### Extra Tasks
+
+1. You will be making an array helper, which will take all of the unread books and display in array format
+2. You will do the same but for read books
+3. You will create an update array button, that will update
+   both arrays with any new books added in the object generator since arrays were first created
