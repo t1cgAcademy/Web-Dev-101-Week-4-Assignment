@@ -22,7 +22,8 @@ body {
 }
 
 .outputPanel,
-.inputPanel {
+.inputPanel,
+.unreadArrayOutputPanel {
   font-family: Serif;
   height: auto;
   width: 600px;
@@ -34,8 +35,7 @@ body {
   box-shadow: 0 0 5px 0 #771b1b80;
 }
 
-.outputPanel button,
-.inputPanel button {
+button {
   border-radius: 12px;
   background-color: lightblue;
   color: darkblue;
@@ -49,10 +49,10 @@ body {
 }
 
 /* select readclass, select psuedo-selector (checked state), ~ - means get sibling anywhere after, followed by desired sibling selector */
-.readClass:checked~.torf2 {
+.readClass:checked ~ .torf2 {
   display: none;
 }
 
-.readClass:not(:checked)~.torf1 {
+.readClass:not(:checked) ~ .torf1 {
   display: none;
 }

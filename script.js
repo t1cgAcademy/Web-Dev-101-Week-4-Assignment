@@ -77,3 +77,29 @@ function resetForm() {
   title.value = '';
   author.value = '';
 }
+///////////New Tasks/////////////
+const unreadBookArrayView = document.querySelector('.unreadBookArrayView');
+const readBookArrayView = document.querySelector('.readBookArrayView');
+let unreadBookArray = [];
+let readBookArray = [];
+makeArray = () => {
+  for (let i = 0; i < library.length; i++) {
+    if (library[i].readingStatus === 'false') {
+      unreadBookArray.push(library[i].title + ',' + '<br />');
+    } else {
+      readBookArray.push(library[i].title + ',' + '<br />');
+    }
+  }
+
+  unreadBookArrayView.innerHTML = unreadBookArray.join('');
+  readBookArrayView.innerHTML = readBookArray.join('');
+};
+
+updateArray = () => {
+  unreadBookArray = [];
+  readBookArray = [];
+  unreadBookArrayView.innerHTML = '';
+  readBookArrayView.innerHTML = '';
+  makeArray();
+};
+//////////////////////////////////
