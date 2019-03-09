@@ -3,71 +3,33 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css" type="text/css" />
-
   <title>academy</title>
 </head>
-<style></style>
-
+<script src="script.js"></script>
 <body>
-  <!-- Add title tag using H1 with class titleDisplay, and set
-    title text to display  "JSON Object Format Helper!!!"-->
-  <div class="outputPanel">
-    <!-- Add h2 with header text set to display "Reading List" -->
-    <!-- Add paragraph tag with text "You have read..." -->
-    <div>
-      <!-- Add empty paragraph tag with id of statusRead -->
-    </div>
-    <!-- Add paragraph tag with text "You still have to read..." -->
-    <!-- Add empty paragraph tag with id of statusNotRead -->
-    <!-- Add button with class buttonStyle, id checkBooks, an onclick set to check stored books function call, and 
-      button text set to "Status of Stored Books" -->
-  </div>
-  <div class="inputPanel">
-    <div>
-      <p>{</p>
-      <!-- Add paragraph tab with text "title:" -->
-      <!-- Add text input with id of title -->
-      <!-- Add paragraph tag with text "," -->
-    </div>
-
-    <div>
-      <p>author:</p>
-      <!-- Add text input with id of author -->
-      <p>,</p>
-    </div>
-
-    <div>
-      <!-- Add paragraph tag with text "Reading Status:" -->
-      <!-- Add checkbox input with class readClass and id readingStatus  -->
-      <!-- Add paragraph tag with class torf1 and set text to display "True" -->
-      <!-- Add paragraph tag with class torf2 and set text to display "False" -->
-      <!-- Add paragraph tag with text "};" -->
-    </div>
-
-    <!-- Add button with class buttonStyle, id addButton, onclick set to add book
-    function call.  Set button text to display "Add New Object" -->
-  </div>
   <div>
-    <!-- Add header the same size as titleDisplay with the same readClass -->
+    <h1>Roster</h1>
+    <div id="roster">
   </div>
-  <div class="unreadArrayOutputPanel">
-    <!-- Add h2 with text that displays "Array of Books to Read" -->
-    <!-- Add p tag with text that displays "[" (to simulate opening array bracket) -->
-    <!-- Add p tag with class unreadBookArrayView (this will be your array contents) -->
-    <!-- Add p tag with text that displays "]" (to simulate closing array bracket) -->
-    <!-- Add h2 with texxt that displays "Array of Read Books" -->
-    <!-- Add p tag with text that displays "[" (to simulate opening array bracket) -->
-    <!-- Add p tag with class readBookArrayView -->
-    <!-- Add p tag with text that displays "]" (to simulate closing array bracket) -->
-    <!-- Add button with onclick makeArray() function call. Set text to display "Make Arrays" -->
-    <!-- Add button with onclick updateArray() function call. Set text to display "Update Array" -->
+    <div class="result"></div>
+    <div class="control">
+        <div>
+            <button onclick="updateDocument()">Update Document</button>
+        </div>
+      <div class="panel">
+        <p>Name</p>
+        <input type="text" id="name" />
+        <p>Number</p>
+        <input type="text" id="number" />
+        <p>Age</p>
+        <input type="text" id="age" />
+        <p>Weight</p>
+        <input type="text" id="weight" />
+        <div>
+            <button onclick="handleAddPlayer()"> Add Player</button>
+        </div>
+      </div>
   </div>
 </body>
-<script src="script.js"></script>
-
 </html>
