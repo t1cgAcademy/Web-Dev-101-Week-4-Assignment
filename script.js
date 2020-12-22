@@ -1,100 +1,102 @@
-// Create selector with title statusRead, using getElementById to get
-// the element with id statusRead for book organization and display.
-// Create selector for statusNotRead (just like above)
-// Create selector called button set to id of the button element that checks the book list
+const statusRead = document.getElementById('statusRead');
+const statusNotRead = document.getElementById('statusNotRead');
+const button = document.querySelector('#checkBooks');
 
-const library = // define me
-  // Initialize and define an array of objects with variable name library.
-  // There should be four objects in your Array, each object must have
-  // three keys => title, author, and readingStatus.  The values of title
-  // and author should be strings (whatever title and author you choose).
-  // The value of readingStatus should be either true or false as a string (important!!)
+const library = [
+  {
+    title: 'book one',
+    author: 'author one',
+    readingStatus: 'true',
+  },
+  {
+    title: 'book two',
+    author: 'author two',
+    readingStatus: 'false',
+  },
+  {
+    title:'book three',
+    author:'author three',
+    readingStaus:'true',
+  },
+  {
+    title:'book four',
+    author:'author four',
+    readingStaus:'false',
+  },
+];
 
   (checkStoredBooks = () => {
-    // Loop through library {
-    // 1. Create variable named book that will show title and author in the following
-    // format...
-    //  -'Steve: Enough Said' by Steve Flint.
-    //  -Be Careful: the title and author (and later when handling reading status, readingStatus)
-    //   must be dynamic values that have been looped through.  For example, the title value should
-    //   be set to the value of each title in the array of objects defined AnimationPlaybackEvent.
-    //  -Hint: You should let your book title value be able to change. (keyword in this sentence!?!?)
-
-    // 2. Set up your control structure for organizing books in predefined array. You will use
-    // the following logic...
-    //   -If the reading status of each is true, then...
-    //     -Create constant variable called linebreak defined by the creation of a line break element
-    //     -Add book to statusRead paragraph tag
-    //     -Add linebreak as a child of statusRead
-    //     -Hint: If confused by how to add things, think of add as another word, a synonym perhaps!?!?
-    //   -If anything else happens then...
-    //     -Create constant variable called linebreak defined by the creation of a line break element
-    //     -Add book to statusNotRead paragraph tag
-    //     -Add linebreak as a child of statusNotRead
-    //   -Bonus:  One should always be thinking of how to make their code more efficient.  How could you
-    //   manipulate scope to avoid repetition in this loop? Hint, if you got here, you
-    //   have aleady done something similar.
-    // }
-
+    for (let i = 0; i<library.length; i++) {
+      let book = ["'" + library[i].title + "'" + " by " + library[i].author + "."];
+      
+      const linebreak = document.createElement('br');
+      if (library[i].readingStatus === 'true') {
+        statusRead.append(book);
+        statusRead.appendChild(linebreak);
+      } else {
+        statusNotRead.append(book);
+        statusNotRead.appendChild(linebreak);
+      }
+    }
     button.disabled = true;
-    // Disable your button in this function but after loop has ended
   });
 
 addBook = () => {
-  // Declare variable called title defined by the value of the title input
-  // Declare variable called author defined by the value of the author input
-  // Declare variable called readingStatus defined by the value of readingStatus checkbox
-  //   -Declaring this is a bit different, given that there is a box that must be checked,
-  //   which makes the value a Boolean. <== The word you need is in this sentence.
+  let title = document.getElementById('title').value;
+  let author = document.getElementById('author').value;
+  let readingStatus = document.getElementById('readingStatus').checked;
 
-  // Declare a newObj object variable with keys title, author and reading status intially defined with
-  // empty strings
-  // If your variable values are dynamic, or will change at some point, be sure to let them.
+  let newObj = { title: '', author: '', readingStatus: '' };
 
-  // Set the title of your newly declared object to the value of title input
-  // Set the author to value of author input
-  // Set readingStatus to value of readingStatus checkbox
+  newObj.title = title;
+  newObj.author = author;
+  newObj.readingStatus = readingStatus;
 
-  // Add the new object to your library.  If you can't think of how, don't push your luck (or maybe you should).
-
-  // Organize newly entered books using what you have done already as an example
+  library.push(newObj);
+  
+  let book = ["'" + library[i].title + "'" + " by " + library[i].author + "."];
+  
+  //below can be called by checkStoredBooks()//
+  const linebreak = document.createElement('br');
+  if (library[i].readingStatus === 'true') {
+    statusRead.append(book);
+    statusRead.appendChild(linebreak);
+  } else {
+    statusNotRead.append(book);
+    statusNotRead.appendChild(linebreak);
+ }
 
   resetForm();
 };
 
 function resetForm() {
-  // Reset title and author input values
+  title.value = '';
+  author.value = '';
 }
 
-// What could you change in this program to adhere to the DRY principle of programming?
-
-/////////////////New Task/////////////////////
-// Create selector called unreadBookArrayView using querySelector to get
-// element with class of the same name
-// Create selector called readBookArrayView using querySelector to get
-// element with class of the same name
-// Initialize a variable called unreadBookArray and set value to an empty array
-// Initialize a variable called readBookArray and set value to an empty array
+const unreadBookArrayView = document.querySelector('.unreadBookArrayView');
+const readBookArrayView = document.querySelector('.readBookArrayView');
+let unreadBookArray = [];
+let readBookArray = [];
 
 makeArray = () => {
-  // Iterate through const library (list of books in array of objects above){
-  // If the reading status of each object (book) is false, push the title
-  // of the object + a comma + a line break tag into unreadBookArray
-  // If the reading status of the object (book) is true, push the title
-  // of the object + a comma + plus a line break tag into readBookArray
-  // Hint: String or bool?
-  // }
-  // Set the inner html of unreadBookArrayView to display unreadBookArray
-  // array as one long string
-  // Set the inner html of readBookArrayView to display readBookArray
-  // array as one long string
+  for (let i = 0; i < library.length; i++) {
+    if (library[i].readingStatus === false) {
+      unreadBookArray.push(library[i].title + ',' + '<br/>');
+    } else {
+      readBookArray.push(library[i] + ',' + '<br />');
+    }
+  }
+  unreadBookArrayView.innerHTML = unreadBookArray.join('');
+  readBookArrayView.innerHTML = readBookArray.join('');
+
 };
 
 updateArray = () => {
-  // Reset unreadBookArray to an empty array
-  // Reset readBookArray to an empty array
-  // Reset unreadBookArrayView display
-  // Reset readBookArrayView display
-  // Call makeArray function
+  unreadBookArray = [];
+  readBookArray = [];
+  unreadBookArrayView.innerHTML = '';
+  readBookArrayView.innerHTML = '';
+  makeArray();
 };
 //////////////////////////////////////////////

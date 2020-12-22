@@ -14,58 +14,56 @@
 <style></style>
 
 <body>
-  <!-- Add title tag using H1 with class titleDisplay, and set
-    title text to display  "JSON Object Format Helper!!!"-->
+  <h1 class="titleDisplay">JSON Object Format Helper</h1>
   <div class="outputPanel">
-    <!-- Add h2 with header text set to display "Reading List" -->
-    <!-- Add paragraph tag with text "You have read..." -->
+    <h2>Reading List</h2>
+    <p>You have read...</p>
+
     <div>
-      <!-- Add empty paragraph tag with id of statusRead -->
+      <p id="statusRead"></p>
     </div>
-    <!-- Add paragraph tag with text "You still have to read..." -->
-    <!-- Add empty paragraph tag with id of statusNotRead -->
-    <!-- Add button with class buttonStyle, id checkBooks, an onclick set to check stored books function call, and 
-      button text set to "Status of Stored Books" -->
+      <p>You still have to read...</p>
+      <p id="statusNotRead"></p>
+      <button class="buttonStyle" id="checkBooks" onclick="checkStoredBooks()">Status of Stored Books</button>
   </div>
   <div class="inputPanel">
     <div>
       <p>{</p>
-      <!-- Add paragraph tab with text "title:" -->
-      <!-- Add text input with id of title -->
-      <!-- Add paragraph tag with text "," -->
-    </div>
-
-    <div>
-      <p>author:</p>
-      <!-- Add text input with id of author -->
+      <p>title:</p>
+      <input type="text" id="title" />
       <p>,</p>
     </div>
 
     <div>
-      <!-- Add paragraph tag with text "Reading Status:" -->
-      <!-- Add checkbox input with class readClass and id readingStatus  -->
-      <!-- Add paragraph tag with class torf1 and set text to display "True" -->
-      <!-- Add paragraph tag with class torf2 and set text to display "False" -->
-      <!-- Add paragraph tag with text "};" -->
+      <p>author:</p>
+      <input type="text" id="author"/>
+      <p>,</p>
     </div>
 
-    <!-- Add button with class buttonStyle, id addButton, onclick set to add book
-    function call.  Set button text to display "Add New Object" -->
+    <div>
+      <p>Reading Status:</p>
+      <input type="checkbox" class="readClass" id="readingStatus"/>
+      <p class="torf1">True</p>
+      <p class="torf2">False</p>
+      <p>};</p>
+    </div>
+
+    <button class="buttonStyle" id="addButton" onclick="addBook()">Add New Object</button>
   </div>
   <div>
-    <!-- Add header the same size as titleDisplay with the same readClass -->
+    <h1 class="titleDisplay">JSON Array Format Helper</h1>
   </div>
   <div class="unreadArrayOutputPanel">
-    <!-- Add h2 with text that displays "Array of Books to Read" -->
-    <!-- Add p tag with text that displays "[" (to simulate opening array bracket) -->
-    <!-- Add p tag with class unreadBookArrayView (this will be your array contents) -->
-    <!-- Add p tag with text that displays "]" (to simulate closing array bracket) -->
-    <!-- Add h2 with texxt that displays "Array of Read Books" -->
-    <!-- Add p tag with text that displays "[" (to simulate opening array bracket) -->
-    <!-- Add p tag with class readBookArrayView -->
-    <!-- Add p tag with text that displays "]" (to simulate closing array bracket) -->
-    <!-- Add button with onclick makeArray() function call. Set text to display "Make Arrays" -->
-    <!-- Add button with onclick updateArray() function call. Set text to display "Update Array" -->
+    <h2>Array of Books to Read</h2>
+    <p>[</p>
+    <p class="unreadBookArrayView"></p>
+    <p>]</p>
+    <h2>Array of Read Books</h2>
+    <p>[</p>
+    <p class="readBookArrayView"></p>
+    <p>]</p>
+    <button onclick="makeArray()">Make Arrays</button>
+    <button onclick="updateArray()">Update Array</button>
   </div>
 </body>
 <script src="script.js"></script>
